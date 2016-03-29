@@ -102,7 +102,7 @@
 <p><code>c</code> is evaluated for you</p>
 <table class="pre"><tr><td><pre><code>120</code></pre></td></tr></table>
 </section>
-<section author="Karlkim Suwanmongkol" description="Introduction to FsReveal" theme="Sky" title="FsReveal" transition="default">
+<section >
 <h4>More F#</h4>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -119,7 +119,7 @@
 <h4><code>prices.[0]/sizes.[0]</code></h4>
 <table class="pre"><tr><td><pre><code>31</code></pre></td></tr></table>
 </section>
-<section author="Karlkim Suwanmongkol" description="Introduction to FsReveal" theme="Sky" title="FsReveal" transition="default">
+<section >
 <h4>C#</h4>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
@@ -144,7 +144,7 @@
 }
 </code></pre></td></tr></table>
 </section>
-<section author="Karlkim Suwanmongkol" description="Introduction to FsReveal" theme="Sky" title="FsReveal" transition="default">
+<section >
 <h4>JavaScript</h4>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
@@ -181,7 +181,7 @@
 }
 </code></pre></td></tr></table>
 </section>
-<section author="Karlkim Suwanmongkol" description="Introduction to FsReveal" theme="Sky" title="FsReveal" transition="default">
+<section >
 <h4>Haskell</h4>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -193,7 +193,7 @@
 <span class="l">8: </span>
 <span class="l">9: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="haskell">recur_count k <span class="prep">=</span> 1 : 1 : zipWith recurAdd (recur_count k) (tail (recur_count k))
+<td class="snippet"><pre class="fssnip highlighted"><code lang="haskell">recur_count k <span class="prep">=</span> <span class="n">1</span> : <span class="n">1</span> : zipWith recurAdd (recur_count k) (tail (recur_count k))
         <span class="k">where</span> recurAdd x y <span class="prep">=</span> k * x <span class="prep">+</span> y
 
 main <span class="prep">=</span> <span class="k">do</span>
@@ -201,11 +201,11 @@ main <span class="prep">=</span> <span class="k">do</span>
   inputFile <span class="prep">&lt;</span><span class="prep">-</span> openFile (head argv) ReadMode
   line <span class="prep">&lt;</span><span class="prep">-</span> hGetLine inputFile
   <span class="k">let</span> [n,k] <span class="prep">=</span> map read (words line)
-  printf <span class="s">"%d\n"</span> ((recur_count k) !! (n-1))
+  printf <span class="s">"%d\n"</span> ((recur_count k) !! (n<span class="n">-1</span>))
 </code></pre></td></tr></table>
 <p><em>code from <a href="https://github.com/NashFP/rosalind/blob/master/mark_wutka%2Bhaskell/FIB/fib_ziplist.hs">NashFP/rosalind</a></em></p>
 </section>
-<section author="Karlkim Suwanmongkol" description="Introduction to FsReveal" theme="Sky" title="FsReveal" transition="default">
+<section >
 <h3>SQL</h3>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -214,8 +214,8 @@ main <span class="prep">=</span> <span class="k">do</span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="sql"><span class="k">select</span> * 
 <span class="k">from</span> 
-  (<span class="k">select</span> 1 <span class="k">as</span> Id <span class="k">union</span> <span class="k">all</span> <span class="k">select</span> 2 <span class="k">union</span> <span class="k">all</span> <span class="k">select</span> 3) <span class="k">as</span> X 
-<span class="k">where</span> Id <span class="k">in</span> (@Ids1, @Ids2, @Ids3)
+  (<span class="k">select</span> <span class="n">1</span> <span class="k">as</span> Id <span class="k">union</span> <span class="k">all</span> <span class="k">select</span> <span class="n">2</span> <span class="k">union</span> <span class="k">all</span> <span class="k">select</span> <span class="n">3</span>) <span class="k">as</span> X 
+<span class="k">where</span> Id <span class="k">in</span> (@Ids<span class="n">1</span>, @Ids<span class="n">2</span>, @Ids<span class="n">3</span>)
 </code></pre></td></tr></table>
 <p><em>sql from <a href="https://code.google.com/p/dapper-dot-net/">Dapper</a></em></p>
 </section>
