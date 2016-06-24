@@ -73,6 +73,15 @@ over 1100 different tags
 ----------------------------------------
 
 
+
+----------------------------------------
+
+# Do we need a custom system?
+
+
+----------------------------------------
+
+
 [ ![](images/codeExampleWithoutTooltip.png)](https://www.google.com.br)
 
 ' let! tells us that the code uses asynchronous workflows, get return value 
@@ -116,6 +125,7 @@ over 1100 different tags
 ' this year has been great for machine learning
 ' but as machine learning is getting more and more
 ' ubiquitous, So are the problems!
+<img src="images/pinterest-fail.png" style="height:640px" />
 
 ----------------------------------------
 
@@ -174,6 +184,11 @@ High Confidence Predictions for Unrecognizable Images. 2015.
 <img src="images/what-dog.png" style="height:500px"/>
 
 ----------------------------------------
+
+
+- data-background : #87c594
+
+
 
 
 - data-background : #87c594
@@ -309,6 +324,10 @@ tfidf(\text{term}, \text{snippet}) = tf(\text{term}, \text{snippet}) \times idf(
 
 ----------------------------------------
 
+
+
+----------------------------------------
+
 # PART II
 ## Suggesting tags
 
@@ -369,6 +388,19 @@ async, #async, async mailprocessor, async paraller, Async sequences, asyncseq, a
 
 ----------------------------------------
 
+# Associations
+
+<br/>
+
+*string* and *parser*
+
+*async* and *MailboxProcessor*
+
+<br/>
+
+*sequence* and *exception*
+
+----------------------------------------
 # Naive Bayes
 
 ![](images/bayes.gif)
@@ -579,6 +611,10 @@ What if there is no snippet tagged *async* that contains *List*?
 
 - data-background : #550080
 
+----------------------------------------
+
+- data-background : #550080
+
 
 * Do you really need a custom system?
 
@@ -605,6 +641,36 @@ What if there is no snippet tagged *async* that contains *List*?
 
  - Introduction to information retrieval [informationretrieval.org](http://informationretrieval.org/) 
 
+----------------------------------------
+
+- data-background : #000000
+
+![](images/StarWars.png)
+
+----------------------------------------
+
+<table>
+<tr>
+
+<td class="noborder">
+
+# Workshop
+## Polyglot Data Science: The Force Awakens 
+
+### Friday, April 1
+
+Data science, F#, R, D3.js <br/>
+...
+and Star Wars!
+
+</td>
+<td class="noborder">
+
+![](images/network.png)
+
+</td>
+</tr>
+</table>
 
 ----------------------------------------
 
