@@ -46,16 +46,11 @@
 </head>
 <body>
     <div class="reveal">
-        <div class="tip" id="fs1">val amazingFunction : work:Async&lt;&#39;a&gt; -&gt; resultOk:(&#39;a -&gt; bool) -&gt; retries:int -&gt; Async&lt;&#39;a&gt;<br /><br />Full name: index.amazingFunction</div>
-<div class="tip" id="fs2">val work : Async&lt;&#39;a&gt;</div>
-<div class="tip" id="fs3">val resultOk : (&#39;a -&gt; bool)</div>
-<div class="tip" id="fs4">val retries : int</div>
-<div class="tip" id="fs5">val async : AsyncBuilder<br /><br />Full name: Microsoft.FSharp.Core.ExtraTopLevelOperators.async</div>
-<div class="tip" id="fs6">val res : &#39;a</div>
-
+        
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section >
+<section >
 <img src="images/chilli_pepper.png" style="width:200px" />
 <h1>Spice up your website</h1>
 <h1>with Machine Learning!</h1>
@@ -80,6 +75,7 @@ It all works nice until you start searching for something<br/>
 </aside>
 </section>
 <section data-background="images/fssnip-tags.png">
+<br/>
 <aside class="notes">
 You can search by tag<br/>
 </aside>
@@ -94,27 +90,27 @@ You can search by tag<br/>
 <p><img src="images/google_fssnip.png" alt="" /></p>
 </section>
 <section data-background="images/fssnip-tags.png">
+<br/>
 </section>
 <section >
-<h1>Why we need a custom system</h1>
-<br/>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="f">amazingFunction</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">work</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="f">resultOk</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">retries</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">async</span> {
-  <span class="k">let!</span> <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">res</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">work</span>
-  <span class="k">if</span> (<span onmouseout="hideTip(event, 'fs3', 8)" onmouseover="showTip(event, 'fs3', 8)" class="f">resultOk</span> <span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">res</span>) <span class="o">||</span> (<span onmouseout="hideTip(event, 'fs4', 10)" onmouseover="showTip(event, 'fs4', 10)" class="i">retries</span> <span class="o">=</span> <span class="n">0</span>) <span class="k">then</span> <span class="k">return</span> <span onmouseout="hideTip(event, 'fs6', 11)" onmouseover="showTip(event, 'fs6', 11)" class="i">res</span>
-  <span class="k">else</span> <span class="k">return!</span> <span onmouseout="hideTip(event, 'fs1', 12)" onmouseover="showTip(event, 'fs1', 12)" class="f">amazingFunction</span> <span onmouseout="hideTip(event, 'fs2', 13)" onmouseover="showTip(event, 'fs2', 13)" class="i">work</span> <span onmouseout="hideTip(event, 'fs3', 14)" onmouseover="showTip(event, 'fs3', 14)" class="f">resultOk</span> (<span onmouseout="hideTip(event, 'fs4', 15)" onmouseover="showTip(event, 'fs4', 15)" class="i">retries</span> <span class="o">-</span> <span class="n">1</span>) }
-</code></pre></td>
-</tr>
-</table>
+<h1>Do we need a custom system?</h1>
+</section>
+<section >
+<p><a href="https://www.google.com.br"> <img src="images/codeExampleWithoutTooltip.png" alt="" /></a></p>
+<aside class="notes">
+let! tells us that the code uses asynchronous workflows, get return value <br/>
+of an asynchronous function<br/>
+Google ignores diacritics, searching for let and let! gives<br/>
+the same results although the meaning is very different<br/>
+</aside>
+</section>
+<section >
+<p><img src="images/codeExampleWithTooltip.png" alt="" /></p>
 <aside class="notes">
 F# is a statically typed language!<br/>
 I'm not interested in how is this function actually called,<br/>
-but I'm interested in that it takes asyncronous workflow<br/>
-and returns asyncronous workflow.<br/>
+but I'm interested in that it takes asynchronous workflow<br/>
+and returns asynchronous workflow.<br/>
 This type of information is not available as text and google <br/>
 doesn't index it for search.<br/>
 Great opportunity to create a custom machine learning system!!!<br/>
@@ -130,6 +126,13 @@ We're programmers, we like to automate - alternative would be do <br/>
 go through the tags manually and curate them!<br/>
 what can possibly go wrong?<br/>
 There's this company that also does a lot of machine learning...<br/>
+</aside>
+</section>
+<section data-background="images/alphago-leesedol.jpg">
+<aside class="notes">
+this year has been great for machine learning<br/>
+but as machine learning is getting more and more<br/>
+ubiquitous, So are the problems!<br/>
 </aside>
 </section>
 <section >
@@ -148,24 +151,35 @@ Sergey Lavrov (Russian foreign minister) = sad little horse<br/>
 </aside>
 </section>
 <section >
+<p><img src="images/twitterbot.png" alt="" /></p>
+</section>
+<section >
 <img src="images/nn.png" style="width:400px" />
 <p>Nguyen A et al.: Deep Neural Networks are Easily Fooled:
 High Confidence Predictions for Unrecognizable Images. 2015.</p>
 </section>
-<section >
+<section data-background="#550080">
 <h1>Using machine learning in production</h1>
 <br />
 <ul>
 <li>dependence on training data</li>
-<li>unpredictable black-box</li>
+<li>inputs</li>
 </ul>
 <aside class="notes">
 incoming data is not controlled, users do many different things<br/>
 Black boxes can be unpredictable<br/>
 </aside>
 </section>
+<section data-background="#87c594">
+<h1>User-generated inputs</h1>
+<img src="images/what-dog.png" style="height:500px"/>
+</section>
+<section data-background="#87c594">
+<img src="images/what-dog-me.png" style="height:600px"/>
+</section>
 <section >
-<h1>Finding related snippets</h1>
+<h1>PART I</h1>
+<h2>Finding related snippets</h2>
 <br/>
 <p>If you liked this <em>F# code</em>, you'll also like ...</p>
 </section>
@@ -188,6 +202,7 @@ Two snippets may have a large overlap if they use common words<br/>
 This allows us to look at code and text differently<br/>
 Text - free structured<br/>
 Code - fixed structure with keywords<br/>
+Keywords have different role than variable names<br/>
 </aside>
 </section>
 <section >
@@ -265,6 +280,7 @@ Code - fixed structure with keywords<br/>
 <aside class="notes">
 Why comparing snippets based on their term frequency only is not sufficient<br/>
 async is informative, x is not<br/>
+term frequency is important but cannot be used alone<br/>
 </aside>
 </section>
 <section >
@@ -288,6 +304,61 @@ By computing this for every snippet, we get vector representation<br/>
 </aside>
 </section>
 <section >
+<h1>Demo</h1>
+</section>
+<section >
+<h1>Vector representation of snippets</h1>
+<table>
+<thead>
+<tr class="header">
+<th><p>Snippet</p></th>
+<th><p>x</p></th>
+<th><p>List</p></th>
+<th><p>Array</p></th>
+<th><p>...</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>snippet1</p></td>
+<td><p>0</p></td>
+<td><p>0.17</p></td>
+<td><p>0</p></td>
+<td><p>...</p></td>
+</tr>
+<tr class="even">
+<td><p>snippet2</p></td>
+<td><p>0</p></td>
+<td><p>0.04</p></td>
+<td><p>0.001</p></td>
+<td><p>...</p></td>
+</tr>
+<tr class="odd">
+<td><p>snippet3</p></td>
+<td><p>0.23</p></td>
+<td><p>0.005</p></td>
+<td><p>0.31</p></td>
+<td><p>...</p></td>
+</tr>
+<tr class="even">
+<td><p>snippet4</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>...</p></td>
+</tr>
+<tr class="odd">
+<td><p>...</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section >
 <h1>Vector representation of snippets</h1>
 <p><img src="images/angle.png" alt="" /></p>
 <aside class="notes">
@@ -295,23 +366,20 @@ angle between snippet vectors shows how related they are<br/>
 </aside>
 </section>
 <section >
-<h1>Demo</h1>
-<aside class="notes">
-Show one snippet - vector representation & result<br/>
-And show the resulting web page presentation<br/>
-</aside>
-</section>
-<section >
-<h1>Suggesting tags</h1>
+<h1>PART II</h1>
+<h2>Suggesting tags</h2>
 <br />
 <img src="images/tags_box.png" style="width:800px" />
+</section>
+<section data-background="images/fssnip-tags.png">
+<br/>
 </section>
 <section >
 <h1>Suggesting tags</h1>
 <br />
 <img src="images/clippy.png" style="width:400px" />
 <aside class="notes">
-One of the most popular tags is F#<br/>
+Actually one of the most popular tags is F#<br/>
 </aside>
 </section>
 <section >
@@ -375,10 +443,34 @@ Maybe this should have the "async" tag!<br/>
 </aside>
 </section>
 <section >
+<h1>Building a predictor</h1>
+<p><img src="images/async_tag3.png" alt="" /></p>
+</section>
+<section >
+<h1>Tag probabilities</h1>
+<h2>Bayes theorem</h2>
+<br />
+<p><span class="math">\[p(A \mid B) = \frac{ p(B \mid A) \; p(A)}{p(B)}\]</span></p>
+</section>
+<section >
+<h1>Tag probabilities</h1>
+<h2>Bayes theorem</h2>
+<br />
+<p><span class="math">\[p(\text{tag} \mid \text{snippet}) \propto p(\text{tag}) \; p(\text{snippet} \mid \text{tag} )\]</span></p>
+</section>
+<section >
 <h1>Tag probabilities</h1>
 <h2>Bayes theorem</h2>
 <br />
 <p><span class="math">\[p(\text{tag} \mid \text{snippet}) \propto p(\text{tag}) \prod_{\text{term}} p(\text{term} \mid \text{tag})\]</span></p>
+</section>
+<section >
+<h1>Tag probabilities</h1>
+<h2>Bayes theorem</h2>
+<br />
+<p><span class="math">\[\begin{multline*}
+p(\text{tag} \mid \text{snippet}) \propto p(\text{tag}) \times  \\ p(\text{term}_1 \mid \text{tag}) \, p(\text{term}_2 \mid \text{tag}) \, p(\text{term}_2 \mid \text{tag}) \dots
+\end{multline*}\]</span></p>
 </section>
 <section >
 <h1>1. Prior probabilities</h1>
@@ -400,7 +492,7 @@ p(async) = 5%<br/>
 <br />
 <p><span class="math">\[p(\text{tag} \mid \text{snippet}) \propto p(\text{tag}) \prod_{\text{term}} p(\text{term} \mid \text{tag})\]</span></p>
 <br />
-<p><span class="math">\[\frac{p(\text{tag} \mid \text{snippet})}{p(\neg\text{tag} \mid \text{snippet})} &gt; 1 ?\]</span></p>
+<p><span class="math">\[p(\text{tag} \mid \text{snippet}) \stackrel{?}{&gt;} p(\neg\text{tag} \mid \text{snippet})\]</span></p>
 <aside class="notes">
 Working in logarithm space<br/>
 The whole prediction reduces to summations<br/>
@@ -410,23 +502,69 @@ The whole prediction reduces to summations<br/>
 <h1>The theory is always nicer</h1>
 <p>What if there is no snippet tagged <em>async</em> that contains <em>List</em>?</p>
 <aside class="notes">
-Introduce numerical fixes that mean that it is a bit messiers<br/>
+Introduce numerical fixes that mean that it is a bit messier<br/>
+Naive Bayes is a very simple algorithm - in principle can use any classification algorithm<br/>
 </aside>
 </section>
 <section >
 <h1>Demo</h1>
 </section>
 <section >
-<h1>Summary</h1>
-<br />
+<h2>Machine learning to improve user experience</h2>
+</section>
+<section >
+<h1>Machine learning</h1>
+<ol>
+<li>Why do you need machine learning?</li>
+<li>Collect your data!</li>
+<li>Feature engineering.</li>
+<li>Actual machine learning.</li>
+<li>Profit!</li>
+</ol>
+</section>
+<section >
+<h1>Machine learning</h1>
+<ol>
+<li>Why do you need machine learning?</li>
+<li>Collect your data!</li>
+<li>Feature engineering.</li>
+<li>Actual machine learning.</li>
+<li>...</li>
+<li>Put it into production.</li>
+<li>Profit!</li>
+</ol>
+</section>
+<section >
+<h1>Machine learning</h1>
+<ol>
+<li>Why do you need machine learning?</li>
+<li>Collect your data!</li>
+<li>Feature engineering.</li>
+<li><strike>Actual machine learning.</strike></li>
+<li>...</li>
+<li><strike>Put it into production.</strike></li>
+<li>Profit!</li>
+</ol>
+</section>
+<section >
+<h1>Machine learning</h1>
+<ol>
+<li>Why do you need machine learning?</li>
+<li>Collect your data!</li>
+<li><p><em>Feature engineering.</em></p></li>
+<li><strike>Actual machine learning.</strike></li>
+<li>...</li>
+<li><strike>Put it into production.</strike></li>
+<li>Profit!</li>
+</ol>
+</section>
+<section data-background="#550080">
 <ul>
+<li>Do you really need a custom system?</li>
 <li>Domain representation</li>
 <li>What are important features</li>
 <li>Machine learning is fun!</li>
 </ul>
-<br /> <br />
-<h2>Contribute to F# snippets website</h2>
-<p><a href="https://github.com/tpetricek/FsSnip.Website">github.com/tpetricek/FsSnip.Website</a></p>
 <aside class="notes">
 Tf-idf as a reasonable representation <br/>
 Choosing which features are important<br/>
@@ -436,6 +574,7 @@ Choosing which features are important<br/>
 <h1>Learning more</h1>
 <ul>
 <li><p>F# snippets <a href="http://fssnip.net">fssnip.net</a></p></li>
+<li><p>F# snippets on GitHub <a href="https://github.com/fssnippets/fssnip-website">github.com/fssnippets</a></p></li>
 <li><p>The F# Foundation <a href="http://www.fsharp.org">www.fsharp.org</a></p></li>
 <li><p>FsLab Package <a href="http://www.fslab.org">www.fslab.org</a></p></li>
 <li><p>Introduction to information retrieval <a href="http://informationretrieval.org/">informationretrieval.org</a></p></li>
@@ -457,6 +596,7 @@ Choosing which features are important<br/>
 <td class="noborder" style="vertical-align:middle" > <a href="http://evelinag.com">evelinag.com</a></td>
 </tr>
 </table></p>
+</section>
 </section>
 
 
